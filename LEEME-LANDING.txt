@@ -1,0 +1,6 @@
+Landing Kit Barro Perfecto
+- index.html: la página completa (HTML + CSS + JS en un solo archivo). Las imágenes están en la carpeta img/.
+- Para poner tu checkout: buscá  var CHECKOUT_URL = "";  al final del archivo y pegá la URL entre las comillas. Aplica a los botones con data-checkout (cierre y barra fija).
+- Contador: en el elemento id="cd", atributo data-end (fecha/hora de fin en UTC, formato ISO). Poné una fecha real de fin de oferta.
+- Links del pie (Privacidad, Reembolso, Términos, Contacto): están en href="#"; reemplazalos por tus páginas.
+- Precio: US$12.99 (antes US$35.99). Garantía: 7 días.

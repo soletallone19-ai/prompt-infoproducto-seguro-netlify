@@ -1,0 +1,699 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Kit Barro Perfecto: 100 plantillas imprimibles para cerámica.">
+<title>Kit Barro Perfecto</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Caveat:wght@600&family=Figtree:wght@400;500;600&display=swap">
+<style>
+/* Layout: una sola columna editorial, con recortes de papel (borde punteado de corte), tarjetas inclinadas como impresiones pegadas y bandas de pincel como en las piezas gráficas. */
+:root {
+  --paper: #F8F0E7;
+  --paper-2: #EFE3D4;
+  --card: #FFFBF6;
+  --ink: #1F2A44;
+  --ink-2: #4B5570;
+  --salmon: #D9806F;
+  --salmon-ink: #A9503F;
+  --olive: #6F7847;
+  --on-olive: #FBF4EA;
+  --mustard: #E3B94F;
+  --on-mustard: #1F2A44;
+  --cta: #D9806F;
+  --cta-ink: #1F2A44;
+  --line: rgba(31, 42, 68, 0.16);
+  --shadow: rgba(31, 42, 68, 0.16);
+  --band: #1F2A44;
+  --on-band: #F8F0E7;
+  --font-display: "Bricolage Grotesque", "Trebuchet MS", system-ui, sans-serif;
+  --font-body: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-hand: "Caveat", "Bradley Hand", cursive;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #171C2B;
+    --paper-2: #1F2538;
+    --card: #262D44;
+    --ink: #F4E9DC;
+    --ink-2: #B8B2A9;
+    --salmon: #E59A8A;
+    --salmon-ink: #EDA999;
+    --olive: #A2AC72;
+    --on-olive: #1A1F10;
+    --mustard: #E8C05E;
+    --on-mustard: #1F2A44;
+    --cta: #E59A8A;
+    --cta-ink: #1A1F2E;
+    --line: rgba(244, 233, 220, 0.18);
+    --shadow: rgba(0, 0, 0, 0.45);
+    --band: #0F1320;
+    --on-band: #F4E9DC;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #171C2B;
+  --paper-2: #1F2538;
+  --card: #262D44;
+  --ink: #F4E9DC;
+  --ink-2: #B8B2A9;
+  --salmon: #E59A8A;
+  --salmon-ink: #EDA999;
+  --olive: #A2AC72;
+  --on-olive: #1A1F10;
+  --mustard: #E8C05E;
+  --on-mustard: #1F2A44;
+  --cta: #E59A8A;
+  --cta-ink: #1A1F2E;
+  --line: rgba(244, 233, 220, 0.18);
+  --shadow: rgba(0, 0, 0, 0.45);
+  --band: #0F1320;
+  --on-band: #F4E9DC;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 17px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+img { display: block; max-width: 100%; height: auto; }
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+  margin: 0;
+}
+p { margin: 0; }
+a { color: inherit; }
+:focus-visible { outline: 3px solid var(--salmon); outline-offset: 3px; border-radius: 4px; }
+
+.wrap { width: min(1120px, 100% - 40px); margin-inline: auto; }
+.section { padding-block: clamp(56px, 8vw, 104px); }
+.section--sand { background: var(--paper-2); }
+.eyebrow {
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--salmon-ink);
+}
+.h2 { font-size: clamp(2rem, 4.6vw, 3.4rem); }
+.lead { font-size: clamp(1.05rem, 1.6vw, 1.22rem); color: var(--ink-2); max-width: 56ch; }
+
+/* Botones */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  font-family: var(--font-display); font-weight: 800; font-size: 1.05rem;
+  padding: 0.95rem 1.6rem; border-radius: 999px; text-decoration: none;
+  border: 2px solid transparent; cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.btn--cta { background: var(--cta); color: var(--cta-ink); box-shadow: 0 6px 0 -2px var(--shadow); }
+.btn--cta:hover { transform: translateY(-2px); }
+@keyframes cta-pulse { 0%,100% { transform: scale(1); box-shadow: 0 6px 0 -2px var(--shadow), 0 0 0 0 color-mix(in srgb, var(--cta) 55%, transparent); background: var(--cta); } 50% { transform: scale(1.06); box-shadow: 0 6px 0 -2px var(--shadow), 0 0 0 14px color-mix(in srgb, var(--cta) 0%, transparent); background: var(--mustard); color: var(--ink); } }
+@media (prefers-reduced-motion: no-preference) { .btn--cta.cta { animation: cta-pulse 2.2s ease-in-out infinite; } .btn--cta.cta:hover { animation-play-state: paused; } }
+
+.btn--ghost { border-color: var(--ink); color: var(--ink); background: transparent; }
+.btn--ghost:hover { background: var(--ink); color: var(--paper); }
+
+/* Banda de pincel */
+.brush {
+  display: inline-block;
+  background: var(--olive); color: var(--on-olive);
+  font-family: var(--font-display); font-weight: 800;
+  text-transform: uppercase; letter-spacing: 0.04em;
+  padding: 0.5em 1.4em;
+  clip-path: polygon(0 18%, 3% 0, 40% 8%, 97% 0, 100% 38%, 98% 100%, 55% 92%, 2% 100%);
+}
+
+/* Barra superior */
+.top {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20;
+  background: var(--paper); border-bottom: 1px dashed var(--line);
+}
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-block: 10px; }
+.brand { font-family: var(--font-display); font-weight: 800; font-size: 1.05rem; letter-spacing: -0.01em; text-decoration: none; }
+.brand span { color: var(--salmon-ink); }
+.top .btn { padding: 0.55rem 1.1rem; font-size: 0.95rem; }
+
+/* Hero */
+.hero { padding-block: clamp(28px, 5vw, 64px) clamp(48px, 7vw, 96px); overflow: clip; }
+.hero h1 { font-size: clamp(2.1rem, 4.3vw, 3.45rem); line-height: 1.04; text-wrap: balance; }
+.hero h1 em { font-style: normal; padding-inline: 0.08em; background: linear-gradient(transparent 64%, color-mix(in srgb, var(--salmon) 55%, transparent) 64%, color-mix(in srgb, var(--salmon) 55%, transparent) 92%, transparent 92%); white-space: normal; -webkit-box-decoration-break: clone; box-decoration-break: clone; }
+.product-tag { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
+.product-sub { font-family: var(--font-display); font-weight: 700; font-size: 1.05rem; letter-spacing: 0.02em; color: var(--ink-2); text-transform: uppercase; padding-left: 4px; }
+.btn--xl { padding: 1.05rem 1.9rem; font-size: 1.08rem; letter-spacing: 0.02em; }
+.price-line { margin: -6px 0 0; font-size: 1rem; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.price-line s { opacity: 0.7; } .price-line b { color: var(--ink); font-size: 1.15rem; }
+.hero-visual { display: grid; place-items: center; min-height: clamp(420px, 62vw, 660px); padding: 8px; }
+.hero-blob { position: absolute; inset: 4% 2% 2%; background: var(--paper-2); border-radius: 46% 54% 50% 50% / 52% 46% 54% 48%; transform: rotate(-6deg); }
+.hero-visual img { position: relative; grid-area: 1 / 1; border-radius: 6px; max-width: 100%; height: auto; }
+.hero-visual .kit { width: min(78%, 440px); z-index: 3; transform: rotate(-2deg); box-shadow: 0 34px 60px -26px var(--shadow), 0 0 0 10px var(--card); border-radius: 4px; }
+.hero-visual .peek { width: min(46%, 250px); z-index: 1; box-shadow: 0 18px 34px -18px var(--shadow), 0 0 0 6px var(--card); border-radius: 3px; }
+.peek-a { transform: translate(-62%, 10%) rotate(-9deg); }
+.peek-b { transform: translate(62%, 14%) rotate(8deg); }
+.seal {
+  position: absolute; z-index: 4; top: 4%; right: 3%; width: 104px; height: 104px; border-radius: 50%;
+  background: var(--mustard); color: var(--on-mustard); display: flex; flex-direction: column; align-items: center; justify-content: center;
+  text-align: center; font-size: 0.78rem; font-weight: 700; line-height: 1.1; transform: rotate(10deg);
+  box-shadow: 0 12px 24px -12px var(--shadow); border: 2px dashed var(--ink);
+}
+.seal b { font-family: var(--font-display); font-size: 2.1rem; line-height: 0.95; font-weight: 800; }
+.hero-visual .note { z-index: 4; right: 2%; bottom: 3%; }
+@media (max-width: 899px) { .hero-visual .peek-a { transform: translate(-48%, 8%) rotate(-9deg); } .hero-visual .peek-b { transform: translate(48%, 12%) rotate(8deg); } .hero-visual .kit { width: min(70%, 360px); } .seal { width: 88px; height: 88px; font-size: .68rem; } .seal b { font-size: 1.7rem; } }
+
+.hero { padding-block: clamp(36px, 6vw, 80px) clamp(48px, 7vw, 96px); }
+.hero-grid { display: grid; gap: 40px; align-items: center; grid-template-columns: 1fr; }
+@media (min-width: 900px) { .hero-grid { grid-template-columns: 1fr 1fr; gap: 32px; } }
+.hero-copy { display: flex; flex-direction: column; gap: 22px; align-items: flex-start; min-width: 0; }
+.hero-cta { display: flex; flex-wrap: wrap; gap: 12px; }
+.trust { display: flex; flex-wrap: wrap; gap: 8px 22px; padding: 0; margin: 0; list-style: none; font-size: 0.95rem; font-weight: 500; color: var(--ink-2); }
+.trust li { display: flex; align-items: center; gap: 8px; }
+.trust li::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--olive); }
+
+.hero-visual { position: relative; min-width: 0; padding: 14px; }
+.cutframe {
+  position: relative; background: var(--card); padding: 14px;
+  border: 2px dashed var(--ink); border-radius: 6px; transform: rotate(1.4deg);
+  box-shadow: 0 18px 40px -18px var(--shadow);
+}
+.cutframe img { border-radius: 4px; width: 100%; }
+.cutframe::before {
+  content: "✂"; position: absolute; top: -17px; left: 22px;
+  background: var(--paper); color: var(--ink); padding: 0 6px; font-size: 1.5rem; line-height: 1;
+}
+.note {
+  position: absolute; right: 0; bottom: -6px;
+  font-family: var(--font-hand); font-size: 1.7rem; line-height: 1.05; font-weight: 600;
+  background: var(--mustard); color: var(--on-mustard);
+  padding: 12px 18px 14px; border-radius: 4px; transform: rotate(-4deg);
+  box-shadow: 0 10px 22px -10px var(--shadow); max-width: 15ch; text-align: center;
+}
+.a4 {
+  position: absolute; left: 0; top: 0; z-index: 2;
+  font-size: 0.78rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
+  background: var(--ink); color: var(--paper); padding: 6px 12px; border-radius: 3px; transform: rotate(-3deg);
+}
+
+/* Problema */
+.problem-grid { display: grid; gap: 40px; grid-template-columns: 1fr; align-items: start; }
+@media (min-width: 900px) { .problem-grid { grid-template-columns: 1fr 1fr; gap: 72px; } }
+.problem-copy { display: flex; flex-direction: column; gap: 18px; min-width: 0; }
+.pains { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.pains li {
+  display: grid; grid-template-columns: 34px 1fr; gap: 14px; align-items: start;
+  background: var(--card); border-radius: 10px; padding: 16px 18px; font-weight: 500;
+  box-shadow: 0 1px 0 var(--line);
+}
+.pains li::before {
+  content: "×"; display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%;
+  background: color-mix(in srgb, var(--salmon) 30%, transparent); color: var(--salmon-ink);
+  font-family: var(--font-display); font-weight: 800; font-size: 1.4rem; line-height: 1;
+}
+.turn { font-family: var(--font-hand); font-size: clamp(1.8rem, 3.4vw, 2.4rem); line-height: 1.1; color: var(--salmon-ink); font-weight: 600; }
+
+/* Proceso */
+.steps { list-style: none; margin: 28px 0 0; padding: 0; display: grid; gap: 12px; grid-template-columns: repeat(2, 1fr); counter-reset: paso; }
+@media (min-width: 1000px) { .steps { grid-template-columns: repeat(4, 1fr); } }
+.step {
+  position: relative; background: var(--card); padding: 14px 14px 16px;
+  border: 2px dashed var(--line); border-radius: 6px; display: flex; flex-direction: column; gap: 6px; min-width: 0;
+}
+.step:nth-child(odd) { transform: rotate(-0.8deg); }
+.step:nth-child(even) { transform: rotate(0.8deg); }
+.step svg { width: 34px; height: 34px; fill: none; stroke: var(--ink); stroke-width: 2.4; stroke-linecap: round; stroke-linejoin: round; }
+.step .n { font-family: var(--font-hand); font-size: 1.25rem; color: var(--salmon-ink); line-height: 1; font-weight: 600; }
+.step h3 { font-size: 1.05rem; line-height: 1.15; }
+.step p { color: var(--ink-2); font-size: 0.85rem; line-height: 1.45; }
+@media (min-width: 640px) { .step { padding: 18px 18px 20px; } .step h3 { font-size: 1.2rem; } .step p { font-size: .92rem; } }
+.sheet-note { margin-top: 28px; font-size: 0.95rem; color: var(--ink-2); display: flex; gap: 10px; align-items: center; }
+.sheet-note::before { content: ""; flex: none; width: 24px; height: 22px; background: var(--salmon); -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 22'%3E%3Cpath d='M12 21C5 15.5 1 12 1 7.2 1 3.9 3.6 1.5 6.6 1.5c2.2 0 4.2 1.2 5.4 3.1 1.2-1.9 3.2-3.1 5.4-3.1 3 0 5.6 2.4 5.6 5.700 0 4.800-4 8.300-11 13.800z'/%3E%3C/svg%3E") center / contain no-repeat; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 22'%3E%3Cpath d='M12 21C5 15.5 1 12 1 7.2 1 3.9 3.6 1.5 6.6 1.5c2.2 0 4.2 1.2 5.4 3.1 1.2-1.9 3.2-3.1 5.4-3.1 3 0 5.6 2.4 5.6 5.700 0 4.800-4 8.300-11 13.800z'/%3E%3C/svg%3E") center / contain no-repeat; }
+
+/* Galería */
+.gallery-head { display: flex; flex-direction: column; gap: 14px; margin-bottom: 36px; }
+.tiles { display: grid; gap: 16px; grid-template-columns: repeat(2, 1fr); }
+@media (min-width: 800px) { .tiles { grid-template-columns: repeat(4, 1fr); } }
+.tile { background: var(--card); padding: 10px 10px 14px; border-radius: 4px; box-shadow: 0 14px 28px -16px var(--shadow); min-width: 0; }
+.tile:nth-child(1) { transform: rotate(-1.6deg); }
+.tile:nth-child(2) { transform: rotate(1.2deg); }
+.tile:nth-child(3) { transform: rotate(-0.9deg); }
+.tile:nth-child(4) { transform: rotate(1.8deg); }
+.tile img { width: 100%; aspect-ratio: 1; object-fit: cover; border-radius: 2px; }
+.tile figcaption { font-family: var(--font-hand); font-size: 1.35rem; padding-top: 8px; text-align: center; color: var(--ink-2); font-weight: 600; line-height: 1.1; }
+
+/* Qué incluye */
+.incl-grid { display: grid; gap: 44px; grid-template-columns: 1fr; align-items: center; }
+@media (min-width: 900px) { .incl-grid { grid-template-columns: 1fr 0.8fr; gap: 72px; } }
+.incl-copy { display: flex; flex-direction: column; gap: 22px; min-width: 0; }
+.checks { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.checks li { display: grid; grid-template-columns: 26px 1fr; gap: 12px; align-items: start; }
+.checks li::before {
+  content: ""; width: 26px; height: 26px; border-radius: 50%; background: var(--olive);
+  -webkit-mask: none; mask: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 26'%3E%3Cpath d='M7 13.5l4 4 8-9' fill='none' stroke='%23FBF4EA' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-color: var(--olive);
+}
+.checks strong { font-weight: 600; }
+.kit-shot { background: var(--card); padding: 12px; border-radius: 4px; transform: rotate(-2deg); box-shadow: 0 22px 44px -22px var(--shadow); max-width: 440px; margin-inline: auto; }
+.kit-shot img { border-radius: 2px; width: 100%; }
+
+/* Manuales */
+.bonus-head { display: flex; flex-direction: column; gap: 14px; margin-bottom: 40px; max-width: 62ch; }
+.manuals { list-style: none; margin: 0; padding: 0; display: grid; gap: 18px 14px; grid-template-columns: repeat(2, 1fr); }
+.manuals .manual:last-child:nth-child(odd) { grid-column: 1 / -1; width: calc(50% - 7px); justify-self: center; }
+.manual .cover { max-width: 190px; }
+@media (min-width: 560px) { .manuals { grid-template-columns: repeat(3, 1fr); } .manuals .manual:last-child:nth-child(odd) { grid-column: auto; width: auto; justify-self: stretch; } }
+@media (min-width: 1100px) { .manuals { grid-template-columns: repeat(5, 1fr); } }
+.manual { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+.manual .cover { width: 100%; margin-inline: auto; background: var(--card); padding: 8px; border-radius: 4px; box-shadow: 0 14px 28px -16px var(--shadow); transition: transform 0.2s ease; }
+.manual:hover .cover { transform: translateY(-4px) rotate(-0.6deg); }
+.manual h3 { font-size: 1rem; line-height: 1.15; }
+.manual p { font-size: 0.85rem; color: var(--ink-2); line-height: 1.5; }
+.manual .val { display: flex; align-items: baseline; gap: 10px; font-size: 0.9rem; font-variant-numeric: tabular-nums; }
+.manual .val s { color: var(--ink-2); }
+.manual .val b { font-weight: 600; color: var(--olive); }
+.manuals-total {
+  margin-top: 36px; display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px;
+  font-size: 1.05rem; font-variant-numeric: tabular-nums;
+}
+.manuals-total s { color: var(--ink-2); }
+.manuals-total b { font-family: var(--font-display); font-weight: 800; color: var(--salmon-ink); }
+
+/* Oferta */
+.offer-wrap { display: grid; gap: 40px; grid-template-columns: 1fr; align-items: center; }
+@media (min-width: 900px) { .offer-wrap { grid-template-columns: 1fr 1fr; gap: 72px; } }
+.offer-copy { display: flex; flex-direction: column; gap: 18px; align-items: flex-start; min-width: 0; }
+.offer {
+  position: relative; background: var(--card); padding: 38px 30px 32px;
+  border: 3px dashed var(--ink); border-radius: 8px; display: flex; flex-direction: column; gap: 18px; align-items: flex-start; min-width: 0;
+  box-shadow: 0 24px 48px -26px var(--shadow);
+}
+.offer::before { content: "✂"; position: absolute; top: -20px; right: 28px; background: var(--paper-2); padding: 0 8px; font-size: 1.8rem; line-height: 1; }
+.price-old { font-size: 1.15rem; color: var(--ink-2); font-variant-numeric: tabular-nums; }
+.price { font-family: var(--font-display); font-weight: 800; font-size: clamp(3.2rem, 9vw, 5rem); line-height: 0.95; letter-spacing: -0.03em; font-variant-numeric: tabular-nums; }
+.price small { font-size: 0.32em; letter-spacing: 0; font-weight: 600; margin-left: 6px; color: var(--ink-2); }
+.badge-off { background: var(--mustard); color: var(--on-mustard); font-weight: 600; font-size: 0.85rem; letter-spacing: 0.06em; text-transform: uppercase; padding: 6px 12px; border-radius: 4px; transform: rotate(-2deg); display: inline-block; }
+.offer .btn { align-self: stretch; text-align: center; }
+.pay { font-size: 0.9rem; color: var(--ink-2); display: flex; flex-wrap: wrap; gap: 4px 14px; }
+
+.guarantee { display: flex; gap: 22px; align-items: center; margin-top: 8px; }
+.guarantee .big { font-family: var(--font-display); font-weight: 800; font-size: clamp(4.5rem, 12vw, 7rem); line-height: 0.85; color: var(--olive); letter-spacing: -0.04em; flex: none; }
+.guarantee .big span { display: block; font-size: 0.17em; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; color: var(--ink-2); margin-top: 6px; }
+.guarantee p { color: var(--ink-2); }
+
+/* FAQ */
+.faq { max-width: 680px; margin-inline: auto; }
+.faq-head { text-align: center; display: flex; flex-direction: column; gap: 12px; align-items: center; margin-bottom: 20px; }
+details { border-bottom: 1px solid var(--line); }
+details:first-of-type { border-top: 1px solid var(--line); }
+summary {
+  list-style: none; cursor: pointer; padding: 12px 4px; font-family: var(--font-display); font-weight: 600; font-size: 0.98rem; line-height: 1.3;
+  display: flex; justify-content: space-between; align-items: center; gap: 16px;
+}
+summary::-webkit-details-marker { display: none; }
+summary::after { content: "+"; flex: none; font-size: 1.3rem; line-height: 1; color: var(--salmon-ink); transition: transform 0.2s ease; }
+details[open] summary::after { transform: rotate(45deg); }
+details p { padding: 0 4px 14px; color: var(--ink-2); max-width: 62ch; font-size: 0.9rem; line-height: 1.5; }
+
+/* Cierre */
+.closing { background: var(--band); color: var(--on-band); text-align: center; padding-block: clamp(64px, 9vw, 110px); }
+.closing .wrap { display: flex; flex-direction: column; align-items: center; gap: 24px; }
+.closing h2 { font-size: clamp(2rem, 5vw, 3.6rem); max-width: 18ch; }
+.closing p { max-width: 54ch; opacity: 0.85; }
+.closing .brush { background: var(--mustard); color: var(--on-mustard); }
+.closing .price-line { font-variant-numeric: tabular-nums; font-size: 1.1rem; }
+.closing .price-line s { opacity: 0.6; }
+
+footer { padding-block: 36px; font-size: 0.9rem; color: var(--ink-2); }
+footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 28px; }
+footer nav { display: flex; flex-wrap: wrap; gap: 8px 22px; }
+
+/* Barra de compra en celular */
+.buybar {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 30;
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  background: var(--paper); border-top: 1px dashed var(--ink);
+  padding: 10px 16px calc(10px + env(safe-area-inset-bottom, 0px));
+}
+.buybar .p { font-family: var(--font-display); font-weight: 800; font-size: 1.35rem; line-height: 1; font-variant-numeric: tabular-nums; }
+.buybar .p s { display: block; font-family: var(--font-body); font-weight: 400; font-size: 0.78rem; color: var(--ink-2); }
+.buybar .btn { padding: 0.75rem 1.2rem; font-size: 1rem; }
+@media (min-width: 900px) { .buybar { display: none; } }
+@media (max-width: 899px) { footer { padding-bottom: 96px; } }
+
+@media (max-width: 520px) {
+  .hero-cta .btn { width: 100%; }
+  .guarantee { flex-direction: column; align-items: flex-start; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  * { transition: none !important; }
+}
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.hero-solo { display: flex; flex-direction: column; align-items: center; gap: 22px; text-align: center; }
+.hero-art { width: min(100%, 600px); height: auto; border-radius: 14px; box-shadow: 0 34px 60px -30px var(--shadow); }
+.hero-solo .trust { justify-content: center; }
+.hero-solo .price-line { margin: 0; }
+.countdown { display: flex; flex-direction: column; align-items: center; gap: 6px; background: var(--card); border: 2px dashed var(--salmon); border-radius: 14px; padding: 14px 26px; }
+.cd-label { font-size: .85rem; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--salmon-ink); }
+.cd-time { display: flex; align-items: center; gap: 8px; font-family: var(--font-display); font-weight: 800; font-size: clamp(2.2rem, 9vw, 3.2rem); line-height: 1; font-variant-numeric: tabular-nums; color: var(--ink); }
+.cd-time i { font-style: normal; color: var(--salmon); }
+.cd-units { display: flex; gap: 0; width: 100%; justify-content: space-around; font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; color: var(--ink-2); }
+.t-wrap { position: relative; margin-top: 28px; }
+.t-track { list-style: none; margin: 0; padding: 6px 2px 14px; display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
+.t-track::-webkit-scrollbar { display: none; }
+.t-slide { flex: none; scroll-snap-align: center; height: clamp(360px, 62vw, 500px); }
+.t-slide img { height: 100%; width: auto; max-width: none; border-radius: 14px; box-shadow: 0 16px 30px -18px var(--shadow); border: 1px solid var(--line); background: var(--card); }
+.t-btn { position: absolute; top: 50%; transform: translateY(-50%); z-index: 2; width: 42px; height: 42px; border-radius: 50%; border: 0; background: var(--card); color: var(--ink); font-size: 1.7rem; line-height: 1; cursor: pointer; box-shadow: 0 6px 16px -6px var(--shadow); }
+.t-prev { left: -6px; } .t-next { right: -6px; }
+.t-dots { display: flex; justify-content: center; gap: 8px; margin-top: 6px; }
+.t-dots i { width: 9px; height: 9px; border-radius: 50%; background: var(--line); transition: background .2s, transform .2s; }
+.t-dots i.on { background: var(--salmon); transform: scale(1.25); }
+</style>
+</head>
+<body>
+
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#inicio">Barro <span>Perfecto</span></a>
+  </div>
+</header>
+
+<main id="inicio">
+  <!-- Hero -->
+  <section class="hero hero--img">
+    <div class="wrap hero-solo">
+      <h1 class="sr-only">Kit Barro Perfecto: 100 plantillas para cerámica. Creá piezas prolijas y simétricas, aunque estés empezando de cero.</h1>
+      <div class="countdown" role="timer" aria-live="off">
+        <span class="cd-label">La oferta de lanzamiento termina en</span>
+        <div class="cd-time" id="cd" data-end="2026-10-06T05:08:00Z"><span id="cd-h">01</span><i>:</i><span id="cd-m">12</span><i>:</i><span id="cd-s">00</span></div>
+        <div class="cd-units"><span>horas</span><span>min</span><span>seg</span></div>
+      </div>
+      <img class="hero-art" src="img/hero-def.webp" width="1024" height="1536" alt="Kit Barro Perfecto: 100 plantillas imprimibles para cerámica. Creá piezas prolijas y simétricas, aunque estés empezando de cero. Pasos: imprimí, recortá, marcá, creá.">
+      <div class="hero-cta">
+        <a class="btn btn--cta btn--xl cta" data-scroll="1" href="#final">QUIERO MIS 100 PLANTILLAS</a>
+      </div>
+      <p class="price-line"><s>US$35.99</s> <b>US$12.99</b> · pago único</p>
+      <ul class="trust">
+        <li>Descarga inmediata por mail</li>
+        <li>5 manuales de regalo</li>
+        <li>Garantía de 7 días</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Problema -->
+  <section class="section section--sand" id="problema">
+    <div class="wrap problem-grid">
+      <div class="problem-copy">
+        <span class="eyebrow">¿Te pasa esto?</span>
+        <h2 class="h2">Le ponés ganas y la pieza sale torcida</h2>
+        <p class="lead">Compraste arcilla, miraste tutoriales y probaste mil veces. Las piezas siguen sin salir como las imaginás.</p>
+        <p class="turn">No es falta de talento. Es falta de una plantilla exacta.</p>
+      </div>
+      <ul class="pains">
+        <li>Te sentás frente a la arcilla y no sabés qué pieza hacer.</li>
+        <li>Las piezas salen torcidas o desparejas por más cuidado que le pongas.</li>
+        <li>Perdés horas diseñando formas desde cero que después no funcionan.</li>
+        <li>Te sale una pieza hermosa y nunca más te sale igual.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Proceso -->
+  <section class="section" id="como-funciona">
+    <div class="wrap">
+      <span class="eyebrow">El proceso real</span>
+      <h2 class="h2" style="margin-top:12px">Imprimí, recortá y creá</h2>
+      <p class="lead" style="margin-top:16px">No son archivos sueltos. Es un sistema completo para llegar desde la forma hasta el acabado final.</p>
+      <ol class="steps">
+        <li class="step">
+          <span class="n">paso 1</span>
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M14 18V7h20v11"/><path d="M14 35H7V18h34v17h-7"/><path d="M14 27h20v14H14z"/><path d="M33 23h2"/></svg>
+          <h3>Descargá las plantillas</h3>
+          <p>Te llegan al mail apenas comprás. Las abrís desde el celu o la compu, cuando quieras. Cada una trae sus medidas y el paso a paso.</p>
+        </li>
+        <li class="step">
+          <span class="n">paso 2</span>
+          <svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="13" cy="14" r="5"/><circle cx="13" cy="34" r="5"/><path d="M17.5 17l23 17M17.5 31l23-17"/></svg>
+          <h3>Imprimí y recortá</h3>
+          <p>Elegís la pieza que querés hacer, la imprimís en una hoja A4 común y recortás la plantilla. Ya tenés tu guía.</p>
+        </li>
+        <li class="step">
+          <span class="n">paso 3</span>
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M9 39l2-9L33 8l7 7-22 22z"/><path d="M29 12l7 7"/><path d="M9 39l9-2"/></svg>
+          <h3>Aplicá sobre arcilla fresca</h3>
+          <p>Apoyás la plantilla sobre la plancha, cortás siguiendo el contorno y salen formas prolijas, simétricas y repetibles todas las veces.</p>
+        </li>
+        <li class="step">
+          <span class="n">paso 4</span>
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M24 41S7 30 7 18a9 9 0 0117-4 9 9 0 0117 4c0 12-17 23-17 23z"/></svg>
+          <h3>Decorá, esmaltá y horneá</h3>
+          <p>Con los 5 manuales de regalo terminás cada pieza: color, esmaltes, decoración y horneado sin sorpresas.</p>
+        </li>
+      </ol>
+      <p class="sheet-note">Todo se imprime en una hoja A4 común, sin papel especial ni impresora profesional.</p>
+    </div>
+  </section>
+
+  <!-- Galería -->
+  <section class="section section--sand" id="piezas">
+    <div class="wrap">
+      <div class="gallery-head">
+        <span class="eyebrow">Lo que vas a poder hacer</span>
+        <h2 class="h2">Piezas con forma, de la taza al plato</h2>
+        <p class="lead">El kit incluye mantequilleras, tazas, teteras, bowls, jarrones, platos con formas y más.</p>
+      </div>
+      <div class="tiles">
+        <figure class="tile" style="margin:0"><img src="img/pieza-1.webp" width="456" height="453" alt="Taza de arcilla clara con asa sobre un posavasos de fibra natural." loading="lazy"><figcaption>Tazas</figcaption></figure>
+        <figure class="tile" style="margin:0"><img src="img/pieza-2.webp" width="456" height="453" alt="Bowl de arcilla con borde ondulado sobre una mesa de madera." loading="lazy"><figcaption>Bowls</figcaption></figure>
+        <figure class="tile" style="margin:0"><img src="img/pieza-3.webp" width="456" height="453" alt="Jarrón redondo con flores secas." loading="lazy"><figcaption>Jarrones</figcaption></figure>
+        <figure class="tile" style="margin:0"><img src="img/pieza-4.webp" width="456" height="453" alt="Plato con forma de hoja y nervaduras marcadas." loading="lazy"><figcaption>Platos con forma</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Qué incluye -->
+  <section class="section" id="incluye">
+    <div class="wrap incl-grid">
+      <div class="incl-copy">
+        <span class="eyebrow">Kit digital completo</span>
+        <h2 class="h2">Kit Barro Perfecto: 100 plantillas para cerámica</h2>
+        <ul class="checks">
+          <li><span><strong>100 plantillas imprimibles</strong> para hacer piezas prolijas desde cero.</span></li>
+          <li><span><strong>Medidas y paso a paso</strong> en cada plantilla. No hay que adivinar nada.</span></li>
+          <li><span><strong>5 manuales de regalo</strong> para decorar, esmaltar y hornear.</span></li>
+          <li><span><strong>PDF para siempre.</strong> Lo abrís en el celular, la tablet o la compu y lo consultás cuando quieras.</span></li>
+          <li><span><strong>Podés vender lo que hagas.</strong> Las piezas son tuyas: para usar, regalar o vender.</span></li>
+        </ul>
+        <a class="btn btn--cta cta" href="#oferta">QUIERO MIS 100 PLANTILLAS</a>
+      </div>
+      <div class="kit-shot">
+        <img src="img/plantillas.webp" width="900" height="1205" alt="Pieza gráfica del kit con el título Creá piezas de cerámica con plantillas, una mesa con piezas de arcilla y los cuatro pasos: imprimí, recortá, calcá y creá." loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- Manuales -->
+  <!-- Testimonios -->
+  <section class="section" id="testimonios" style="padding-top:0">
+    <div class="wrap">
+      <span class="eyebrow">Lo que cuentan quienes ya lo usan</span>
+      <h2 class="h2" style="margin-top:12px">Piezas más parejas, mensajes reales</h2>
+      <div class="t-wrap">
+        <button class="t-btn t-prev" type="button" aria-label="Anterior">‹</button>
+        <ul class="t-track" id="tt" tabindex="0" aria-label="Testimonios en carrusel">
+<li class="t-slide"><img src="img/test-1.webp" height="900" alt="Mensaje de WhatsApp de Vanina: Te quería mostrar mi casita. Estoy ahora más entusiasmada porque puedo crear piezas más parejas." loading="lazy"></li>
+<li class="t-slide"><img src="img/test-2.webp" height="900" alt="Mensaje de WhatsApp de María: Cada vez más parejas mis tazas, antes me salían todas distintas, ahora con las plantillas estoy creando piezas súper lindas." loading="lazy"></li>
+<li class="t-slide"><img src="img/test-3.webp" height="900" alt="Mensaje de WhatsApp de Julia: Primeras piezas. Feliz, estoy, súper pareja me salió y me quedó hermoso el esmaltado, así que ya estoy recomendando a mis amigas ceramistas el kit de plantillas." loading="lazy"></li>
+<li class="t-slide"><img src="img/test-4.webp" height="900" alt="Mensaje de WhatsApp de Bárbara: Te cuento que con las plantillas del kit estoy creando mis primeras piezas, súper parejas y con mis propios engobes." loading="lazy"></li>
+<li class="t-slide"><img src="img/test-5.webp" height="900" alt="Mensaje de WhatsApp de Pipi: Quiero mostrarte las piezas que estoy creando con el kit de plantillas, cada vez más parejas. Estoy feliz." loading="lazy"></li>
+        </ul>
+        <button class="t-btn t-next" type="button" aria-label="Siguiente">›</button>
+      </div>
+      <div class="t-dots" id="td" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <section class="section section--sand" id="manuales">
+    <div class="wrap">
+      <div class="bonus-head">
+        <span class="eyebrow">Incluidos de regalo</span>
+        <h2 class="h2">5 manuales para terminar cada pieza</h2>
+        <p class="lead">La forma es solo el principio. Estos manuales te llevan del color al horneado sin que se te rompa nada.</p>
+      </div>
+      <ul class="manuals">
+        <li class="manual">
+          <div class="cover"><img src="img/decorativas.webp" width="900" height="1205" alt="Portada del Manual de técnicas decorativas." loading="lazy"></div>
+          <h3>Técnicas decorativas</h3>
+          <p>Esponjado, sellos, calados y más, para que cada pieza sea única.</p>
+          <div class="val"><s>US$6.99</s><b>Incluido</b></div>
+        </li>
+        <li class="manual">
+          <div class="cover"><img src="img/esmaltes-a.webp" width="900" height="1205" alt="Portada del Manual de esmaltes." loading="lazy"></div>
+          <h3>Esmaltes</h3>
+          <p>Qué esmalte usar, cómo prepararlo y cómo aplicarlo. Sin ser química.</p>
+          <div class="val"><s>US$5.99</s><b>Incluido</b></div>
+        </li>
+        <li class="manual">
+          <div class="cover"><img src="img/pigmentos.webp" width="900" height="1205" alt="Portada del Manual de engobes, pigmentos y óxidos." loading="lazy"></div>
+          <h3>Engobes, pigmentos y óxidos</h3>
+          <p>El color no es lotería: dale textura y personalidad a cada pieza.</p>
+          <div class="val"><s>US$6.99</s><b>Incluido</b></div>
+        </li>
+        <li class="manual">
+          <div class="cover"><img src="img/superposicion.webp" width="900" height="1205" alt="Portada del Manual de superposición de esmaltes." loading="lazy"></div>
+          <h3>Superposición de esmaltes</h3>
+          <p>Combiná esmaltes y lográ acabados únicos de forma controlada.</p>
+          <div class="val"><s>US$4.99</s><b>Incluido</b></div>
+        </li>
+        <li class="manual">
+          <div class="cover"><img src="img/horneado.webp" width="900" height="1205" alt="Portada del Manual de horneado." loading="lazy"></div>
+          <h3>Horneado</h3>
+          <p>Temperaturas, tiempos y errores a evitar para que nada se rompa.</p>
+          <div class="val"><s>US$4.99</s><b>Incluido</b></div>
+        </li>
+      </ul>
+      <p class="manuals-total"><span>Valor de los manuales:</span> <s>US$29.95</s> <b>hoy, de regalo</b></p>
+    </div>
+  </section>
+
+  <!-- Oferta -->
+  <section class="section" id="oferta">
+    <div class="wrap offer-wrap">
+      <div class="offer-copy">
+        <span class="eyebrow">Garantía real</span>
+        <h2 class="h2">Tenés 7 días para ver el material</h2>
+        <div class="guarantee">
+          <p>Si dentro de los primeros 7 días sentís que no es para vos, nos avisás por mail y te devolvemos el dinero. Sin vueltas.</p>
+        </div>
+      </div>
+      <div class="offer">
+        <span class="badge-off">70% OFF · precio de lanzamiento</span>
+        <div>
+          <div class="price-old"><s>US$35.99</s></div>
+          <div class="price">US$12.99<small>USD</small></div>
+        </div>
+        <ul class="checks">
+          <li><span>100 plantillas imprimibles</span></li>
+          <li><span>5 manuales de regalo</span></li>
+          <li><span>PDF digital, entrega inmediata por mail</span></li>
+          <li><span>7 días de garantía</span></li>
+        </ul>
+        <p class="pay"><span>Acceso inmediato</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section section--sand" id="preguntas">
+    <div class="wrap faq">
+      <div class="faq-head">
+        <span class="eyebrow">Preguntas frecuentes</span>
+        <h2 class="h2">Todo pensado para que empieces sin trabarte</h2>
+      </div>
+      <details>
+        <summary>¿Cómo recibo el material?</summary>
+        <p>Apenas pagás te llega un mail con el link de descarga. Son PDFs que abrís en cualquier celular, tablet o computadora. En menos de un minuto ya lo tenés.</p>
+      </details>
+      <details>
+        <summary>¿Necesito experiencia previa?</summary>
+        <p>No. Las plantillas están pensadas para que crees piezas prolijas aunque estés arrancando de cero. Y si ya hacés cerámica, te ahorran tiempo y te dan consistencia.</p>
+      </details>
+      <details>
+        <summary>¿Cómo se usan las plantillas?</summary>
+        <p>Las imprimís en una hoja A4 común, las recortás y las apoyás sobre la arcilla fresca como guía de corte. Cada plantilla trae su paso a paso con medidas.</p>
+      </details>
+      <details>
+        <summary>¿Necesito horno cerámico?</summary>
+        <p>Para piezas cerámicas tradicionales sí: la cocción es parte del proceso, y el Manual de Horneado te guía para no arruinar piezas. Si trabajás con arcilla sin horno, las plantillas te sirven igual para lograr las formas.</p>
+      </details>
+      <details>
+        <summary>Ya hago cerámica, ¿me sirve igual?</summary>
+        <p>Sí. Es donde más rinde: formas consistentes, colecciones repetibles y menos tiempo diseñando desde cero. Es ideal si vendés tus piezas y necesitás repetir modelos.</p>
+      </details>
+      <details>
+        <summary>¿Puedo vender las piezas que haga?</summary>
+        <p>Sí. Las piezas que crees con las plantillas son tuyas: para usar, regalar o vender.</p>
+      </details>
+      <details>
+        <summary>¿Es un curso en video?</summary>
+        <p>No. Es material digital descargable: el kit de 100 plantillas más 5 manuales completos en PDF. Lo tenés para siempre y lo consultás cuando quieras.</p>
+      </details>
+      <details>
+        <summary>¿Qué incluye exactamente?</summary>
+        <p>El kit de 100 plantillas cerámicas imprimibles (mantequilleras, tazas, teteras, bowls, jarrones, platos con formas y más) y 5 manuales de regalo: técnicas decorativas, esmaltes, engobes, superposición de esmaltes y horneado.</p>
+      </details>
+      <details>
+        <summary>¿Y si no me sirve?</summary>
+        <p>Tenés 7 días de garantía. Si el material no es lo que esperabas, escribís un mail y te devolvemos el 100% de tu dinero. Sin preguntas.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- Cierre -->
+  <section class="closing" id="final">
+    <div class="wrap">
+      <span class="brush">Hoy, precio de lanzamiento</span>
+      <h2>No necesitás más ideas guardadas en Pinterest. Necesitás empezar.</h2>
+      <p>El Kit Barro Perfecto te da la forma, el color, el acabado y el horneado. Todo en un solo kit.</p>
+      <p class="price-line"><s>US$35.99</s> &nbsp;<strong>US$12.99</strong></p>
+      <a class="btn btn--cta cta" href="#oferta" data-checkout="1">QUIERO MIS 100 PLANTILLAS</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Barro Perfecto</span>
+    <nav aria-label="Políticas">
+      <a href="#">Privacidad</a>
+      <a href="#">Reembolso</a>
+      <a href="#">Términos</a>
+      <a href="#">Contacto</a>
+    </nav>
+  </div>
+</footer>
+
+<div class="buybar">
+  <div class="p"><s>US$35.99</s>US$12.99</div>
+  <a class="btn btn--cta cta" href="#oferta" data-checkout="1">QUIERO MIS 100 PLANTILLAS</a>
+</div>
+
+<script>
+  // Abre una pregunta a la vez.
+  var all = document.querySelectorAll("details");
+  all.forEach(function (d) {
+    d.addEventListener("toggle", function () {
+      if (d.open) all.forEach(function (o) { if (o !== d) o.open = false; });
+    });
+  });
+(function(){var el=document.getElementById('cd');if(!el)return;var end=Date.parse(el.dataset.end);function p(n){return String(n).padStart(2,'0')}
+function tick(){var d=Math.max(0,Math.floor((end-Date.now())/1000));document.getElementById('cd-h').textContent=p(Math.floor(d/3600));document.getElementById('cd-m').textContent=p(Math.floor(d%3600/60));document.getElementById('cd-s').textContent=p(d%60);if(d===0){el.parentNode.querySelector('.cd-label').textContent='La oferta de lanzamiento terminó';clearInterval(t)}}
+var t=setInterval(tick,1000);tick();})();
+(function(){var tr=document.getElementById('tt');if(!tr)return;var sl=tr.children,dots=document.getElementById('td');
+for(var i=0;i<sl.length;i++){dots.appendChild(document.createElement('i'))}
+function cur(){var c=tr.scrollLeft+tr.clientWidth/2,b=0,bd=1e9;for(var i=0;i<sl.length;i++){var m=sl[i].offsetLeft+sl[i].offsetWidth/2,d=Math.abs(m-c);if(d<bd){bd=d;b=i}}return b}
+function mark(){var k=cur();for(var i=0;i<dots.children.length;i++)dots.children[i].className=i===k?'on':''}
+function go(n){n=Math.max(0,Math.min(sl.length-1,n));tr.scrollTo({left:sl[n].offsetLeft-(tr.clientWidth-sl[n].offsetWidth)/2,behavior:'smooth'})}
+document.querySelector('.t-prev').onclick=function(){go(cur()-1)};document.querySelector('.t-next').onclick=function(){go(cur()+1)};
+tr.addEventListener('scroll',function(){requestAnimationFrame(mark)});window.addEventListener('resize',mark);mark();})();
+// Link de checkout propio: pegá acá la URL de tu tienda: solo el 3.er botón (sección de la oferta) lleva al checkout.
+var CHECKOUT_URL = "";
+if (CHECKOUT_URL) document.querySelectorAll("a[data-checkout]").forEach(function (a) { a.href = CHECKOUT_URL; });
+</script>
+
+</body>
+</html>
