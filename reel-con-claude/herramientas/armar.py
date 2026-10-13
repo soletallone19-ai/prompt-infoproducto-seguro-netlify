@@ -65,7 +65,7 @@ def tarjeta(destino):
     y = y0 + 50
     for texto, tam, color in [(d.get("qué es", ""), 54, (20, 20, 20)),
                               (d.get("formato", ""), 40, (90, 90, 90)),
-                              (d.get("precio", ""), 110, (200, 40, 40)),
+                              ("" if d.get("precio en video", "sí").lower().startswith("no") else d.get("precio", ""), 110, (200, 40, 40)),
                               ("Enlace abajo", 44, (20, 20, 20))]:
         f = fuente(tam)
         for l in envolver(dr, texto, f, x1 - x0 - 80)[:2]:
