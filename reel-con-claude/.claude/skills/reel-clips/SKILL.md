@@ -72,6 +72,8 @@ Antes: pedir tope al usuario (créditos = caracteres del guion × 1,2). Registra
 El consumo real se lee del **historial** (`GET /v1/history`, campo `character_count_change_from/to` del ítem nuevo), no del contador de la suscripción, que tarda en actualizarse: si el contador dice 0, se registra `null` y se vuelve a consultar; nunca 0. Guardar `voz.mp3` (base64 → bytes) y `alineacion.json` (`alignment.characters`, `character_start_times_seconds`, `character_end_times_seconds`). Leer el consumo real en `GET /v1/user/subscription` (antes y después) y conciliar en `registro.json`.
 Voice ID: pedírselo al usuario o listar `GET /v1/voices` y proponer una voz neutra LATAM. No clonar voces.
 
+**Alternativa gratis:** si el usuario lo pide, `python herramientas/voz_gratis.py generar [voz]` (edge-tts, sin clave ni costo; voces `es-AR-ElenaNeural`, `es-AR-TomasNeural`, `es-MX-DaliaNeural`, `es-MX-JorgeNeural`). El texto se lee de `reel/guion.txt` y deja `voz.mp3` y `alineacion.json` con el mismo formato. Números escritos con letras. No pide tope porque no cuesta.
+
 ### 6 · Subtítulos y cortes
 Script `herramientas/alinear.py`: de la alineación por carácter → palabras (`{texto, desde, hasta}`) → frases de ≤ 3 palabras → `subtitulos.srt`. Cortes de bloque: el `desde` de la primera palabra de cada bloque. Duración total = `hasta` de la última palabra + 0,8 s; a la voz se le agrega ese silencio al final (`apad`) para que el video no se corte con `-shortest`. Los cortes se redondean a **cuadros enteros** (30 fps): sin eso un tramo de 1,5 s puede quedar en 1,498 y fallar el mínimo.
 Asignar clips a bloques: si un bloque tiene 2 clips, se reparten en partes iguales. Si el clip es más corto que su tramo, se ralentiza hasta 0,5×; si sigue corto, se elige otro.

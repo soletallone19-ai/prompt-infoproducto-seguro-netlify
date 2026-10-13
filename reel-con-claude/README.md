@@ -14,6 +14,9 @@ Un video vertical de anuncio para tu infoproducto, armado por tu Claude: clips r
 3. Contestá: aprobás el guion, aprobás los clips, das el tope para la voz.
 4. Te entrega `reel/final/reel.mp4` y una tira de 8 fotos para que lo mires antes de subirlo.
 
+## Voz gratis (opcional)
+Si no querés usar ElevenLabs, `herramientas/voz_gratis.py` usa las voces de Microsoft (edge-tts): gratis, sin cuenta ni clave. Instalá una vez `pip install edge-tts` y decile a Claude: "hacé la voz gratis con es-AR-ElenaNeural". Escribí los números con letras en el guion. Es un servicio no oficial: si deja de andar, volvé a ElevenLabs.
+
 ## Cuánto cuesta
 Clips: nada. Voz: centavos por video (el ejemplo de la clase costó 147 créditos de ElevenLabs, unos 2 centavos de dólar). Claude no gasta nada sin que le des un tope.
 
