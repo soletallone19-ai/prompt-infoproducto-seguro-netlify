@@ -63,7 +63,7 @@ def tarjeta(destino):
     x0, y0, x1, y1 = 90, 560, 990, 1180  # dentro de zonas seguras
     dr.rounded_rectangle((x0, y0, x1, y1), 40, fill=(255, 255, 255, 235))
     y = y0 + 50
-    for texto, tam, color in [(d.get("qué es", ""), 54, (20, 20, 20)),
+    for texto, tam, color in [(d.get("qué es", "").split(",")[0], 64, (20, 20, 20)),
                               (d.get("formato", ""), 40, (90, 90, 90)),
                               ("" if d.get("precio en video", "sí").lower().startswith("no") else d.get("precio", ""), 110, (200, 40, 40)),
                               ("Enlace abajo", 44, (20, 20, 20))]:
